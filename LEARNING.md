@@ -43,6 +43,8 @@ Your personalized path: ~1,170 hours across 20 phases. Estimates come from the i
 |------|--------|------|------|
 | 2026-11-02 | 00-setup-and-tooling/01-dev-environment | 2/3 | Created and activated .venv with Python 3.14.6; installed NumPy and verified dot product 14. Understands interpreter isolation and PATH; review system foundation before runtimes. Beginner preflight passed 2/2; GPU access was discussed, not tested. |
 
+| 2026-11-02 | 00-setup-and-tooling/02-git-and-collaboration | 3/3 | Warm-up 2/2; correctly predicted staging snapshots and branch behavior. Staged and committed LEARNING.md on my-progress, pushed to own fork, and verified existing checkpoint ignore rules. Understands that ignore rules do not remove tracked history. |
+
 ## Review queue
 
 - 00-setup-and-tooling/01-dev-environment — Review bottom-up environment setup: system foundation, package managers, language runtimes, AI libraries. Quiz: 2/3 (67%).
