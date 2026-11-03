@@ -45,6 +45,15 @@ Your personalized path: ~1,170 hours across 20 phases. Estimates come from the i
 
 | 2026-11-02 | 00-setup-and-tooling/02-git-and-collaboration | 3/3 | Warm-up 2/2; correctly predicted staging snapshots and branch behavior. Staged and committed LEARNING.md on my-progress, pushed to own fork, and verified existing checkpoint ignore rules. Understands that ignore rules do not remove tracked history. |
 
+| 2026-11-03 | 00-setup-and-tooling/03-gpu-setup-and-cloud | 2/3 | Warm-up 2/2; verified M1 Pro GPU (14 cores), 16 GiB unified memory, and PyTorch 2.15.0 MPS access. Ran identity matmul on mps:0; warmed 4000x4000 benchmark medians: CPU 0.0686s, MPS 0.0353s (1.94x). Learned dispatch overhead, batching, synchronization, identity multiplication, and fp16 weight estimates; initially assumed GPU always wins and overhead per matrix increases with batching. Missed NVIDIA status command; review nvidia-smi. |
+
+| 2026-11-03 | 00-setup-and-tooling/04-apis-and-keys | 3/3 | Warm-up 1/2; confused VRAM with swap, then reviewed dedicated versus unified memory. Completed live raw HTTP request using learning-artifacts/00-04-apis-and-keys/first_request.py; reported 21 input tokens, 52 output tokens, and end_turn. Understands backend key storage, explicit .env loading, headers/body, JSON encoding, SDK request construction and parsing, and 401 versus 429. Initially mistook a nonempty environment variable for a valid key; corrected after feedback. SDK comparison discussed, not run. |
+
+| 2026-11-03 | 00-setup-and-tooling/05-jupyter-notebooks | 3/3 | Warm-up 2/2. Ran notebook cells; screenshot confirmed edited assignment left kernel value unchanged. Reported 100 after restart and run all. Initially confused editing with execution and expected variables to survive restart; later correctly explained that deleting a cell leaves its variables in memory. Reported list timing 3.11 ms versus NumPy 30.6 us (about 102x faster), and a single-run %%time result with sum 333328333350000. Correctly chose notebooks for exploration and scripts for scheduled jobs. |
+
+| 2026-11-03 | 00-setup-and-tooling/06-python-environments | 3/3 | Warm-up 2/2. Reported matching project Python and pip paths; created and activated learning-artifacts/00-06-python-environments/isolated-env, confirmed NumPy absent before installation, then reported NumPy 2.5.4 installed inside its site-packages. Saved requirements.txt containing numpy==2.5.4. Correctly explained package isolation and activation; initially thought numpy>=2.5 guaranteed identical versions, then distinguished ranges from exact pins. Conda tracking and NVIDIA build/driver compatibility discussed; uv, Conda, and setup script not run. |
+
 ## Review queue
 
 - 00-setup-and-tooling/01-dev-environment — Review bottom-up environment setup: system foundation, package managers, language runtimes, AI libraries. Quiz: 2/3 (67%).
+- 00-setup-and-tooling/03-gpu-setup-and-cloud — Review NVIDIA hardware status via nvidia-smi versus PyTorch runtime availability checks; reinforce dispatch overhead per matrix when batching. Quiz: 2/3 (67%).
